@@ -1,0 +1,16 @@
+
+public class miwah {
+ public static void main(String args[]){
+ int nom1=7,nom2=6;
+ if(nom1>nom2)
+	 System.out.println("awal number loy di da doham na ");
+ 
+ else if(nom1==nom2)
+	 System.out.println("awal number masawi di da doham sara ");
+ else
+	 System.out.println("doham number loy di da awal na ");
+ 
+ }
+ 
+ 
+}

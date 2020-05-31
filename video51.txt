@@ -1,0 +1,24 @@
+package test1;
+public enum Year {BAHAR, DUBI, MANI, JAMI;
+  
+	
+	
+}
+
+
+
+
+
+
+package test1;
+
+public class EnumTest {
+
+    
+    public static void main(String[] args) {
+    	
+    	for(Year a:Year.values())
+     System.out.println(a);
+      
+    }
+}

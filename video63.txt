@@ -1,0 +1,88 @@
+
+ 
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.Spinner;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+ 
+public class test extends Application {
+	public static void main(String[] args) {
+        Application.launch(args);
+    }
+ 
+    @Override
+    public void start(Stage stage) {
+    	 VBox root=new VBox();
+    	 Scene scene = new Scene(root, 400, 200);
+    	 root.setPadding(new Insets(10,10,10,10));
+    	 root.setSpacing(10);
+    	 Label lb1=new Label("??? ????? ????? ?????? ???");
+    	 Label lb2=new Label("????? ????? ?????");
+    	 Label lb3=new Label("????");
+         ChoiceBox <String>choice=new ChoiceBox();  
+         choice.getItems().add("????");
+         choice.getItems().addAll("??????","???????","??????");
+         choice.setValue("????");
+         choice.setOnAction(e->lb3.setText(choice.getValue()));
+         
+        root.getChildren().addAll(lb1,choice,lb2,lb3);
+        stage.setTitle("???? ?? ???? ??");
+        stage.setScene(scene);
+        stage.show();
+    }
+ 
+    
+ 
+}
+
+
+
+
+
+
+
+ 
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.Spinner;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+ 
+public class test extends Application {
+	public static void main(String[] args) {
+        Application.launch(args);
+    }
+ 
+    @Override
+    public void start(Stage stage) {
+    	 VBox root=new VBox();
+    	 Scene scene = new Scene(root, 400, 200);
+    	 root.setPadding(new Insets(10,10,10,10));
+    	 root.setSpacing(10);
+    	 Label lb1=new Label("??? ????? ????? ?????? ???");
+    	 Label lb2=new Label("????? ????? ?????");
+    	 Label lb3=new Label("????");
+         ChoiceBox <String>choice=new ChoiceBox();  
+         choice.getItems().add("????");
+         choice.getItems().addAll("??????","???????","??????");
+         choice.setValue("????");
+         choice.getSelectionModel().selectedItemProperty().addListener((v,ov,nv)-> lb3.setText(nv));
+         
+        root.getChildren().addAll(lb1,choice,lb2,lb3);
+        stage.setTitle("???? ?? ???? ??");
+        stage.setScene(scene);
+        stage.show();
+    }
+ 
+    
+ 
+}

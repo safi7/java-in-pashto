@@ -1,0 +1,12 @@
+import java.util.Random;
+
+public class miwah {
+ public static void main(String args[]){
+	
+ double number=16.13;
+	 System.out.println(Math.pow(number, 2));
+	 System.out.println(Math.sqrt(number));
+	 System.out.println(Math.round(number));
+	 System.out.println(Math.floor(number));
+ }
+}

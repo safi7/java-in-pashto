@@ -1,0 +1,59 @@
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class gui1 extends Application
+{
+    public static void main(String[] args)
+    {
+        Application.launch(args);
+    }
+
+    @Override
+    public void start(Stage stage)
+    {
+    	
+    	VBox grid = new VBox();
+        grid.setPadding(new Insets(10,10,10,10));
+        grid.setSpacing(10);
+        TreeView<String>tree=new TreeView<>();
+        TreeItem<String>flar,zoi1,zoi2;
+        flar=new TreeItem<>();
+        flar.setValue("???");
+        flar.setExpanded(true);
+        tree.setRoot(flar);
+        zoi1=Make("??????",flar);
+        Make("????",zoi1);
+        Make("????",zoi1);
+        Make("?????",zoi1);
+        Label lb1=new Label();
+        zoi2=Make("???????",flar);
+        Make("?????",zoi2);
+        Make("????",zoi2);
+        tree.getSelectionModel().selectedItemProperty().addListener((v,ov,nv)->lb1.setText(nv.getValue()));
+        grid.getChildren().addAll(tree,lb1);
+        Scene scene = new Scene(grid, 450, 500);
+
+        stage.setTitle("Hello Spinner");
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+  public TreeItem<String> Make(String zoi, TreeItem<String>flar){ 
+	  TreeItem<String>item=new TreeItem<>(zoi);
+	  flar.getChildren().add(item);
+	  item.setExpanded(true);
+	  return item;
+	  
+	  
+  }
+ 
+}

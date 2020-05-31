@@ -1,0 +1,56 @@
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class test extends Application {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage window) throws Exception {
+		    Label lb1=new Label("????? ???? ???? ?????? ???");
+		    Label lb2=new Label("????? ????? ???????");
+		    Label lb3=new Label("");
+		    Label lb4=new Label("");
+		    Label lb5=new Label("");
+		    
+	        CheckBox btn1=new CheckBox("????");
+	        CheckBox btn2=new CheckBox("??????");
+	        CheckBox btn3=new CheckBox("???????");
+	        
+	        btn1.setAllowIndeterminate(true);
+	        btn1.setOnAction(e->{if(btn1.isSelected())
+	        lb3.setText(btn1.getText());
+	        else  lb3.setText("");
+	        });
+	        btn2.setOnAction(e->{if(btn2.isSelected())
+	        lb4.setText(btn2.getText());
+	        else  lb4.setText("");
+	        });
+	        btn3.setOnAction(e->{if(btn3.isSelected())
+	        lb5.setText(btn3.getText());
+	        else  lb5.setText("");
+	        });
+			
+			VBox pane = new VBox();
+			pane.setPadding(new Insets(10, 10, 10, 10));
+			pane.setSpacing(10);
+			pane.getChildren().addAll(lb1,btn1,btn2,btn3,lb2,lb3,lb4,lb5);
+			
+			Scene sen = new Scene(pane, 500, 350);
+			window.setScene(sen);
+			window.setTitle("my windwo");
+			window.show();
+	}
+
+	
+
+}

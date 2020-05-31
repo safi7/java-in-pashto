@@ -1,0 +1,12 @@
+import java.util.Random;
+
+public class miwah {
+ public static void main(String args[]){
+	 Random random=new Random();
+	 
+ 
+ int number=10+random.nextInt(100-10+1);
+
+	 System.out.println(number);
+ }
+}

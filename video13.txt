@@ -1,0 +1,15 @@
+
+public class miwah {
+ public static void main(String args[]){
+ int nom1=7,nom2=6;
+if(nom1>nom2&&nom1%2==0)
+	 System.out.println("awal loy di da doham  na, aw awal number joft di");
+	
+ 
+else if(nom1>nom2&&nom1%2!=0)
+	 System.out.println("awal loy di da doham  na, aw awal number taq di");
+
+ else
+	 System.out.println("awal kochnidi da doham  na");
+ }
+}

@@ -1,0 +1,34 @@
+package test1;
+public enum Year {BAHAR("shaysta",1), DUBI("Garam",2), MANI("mutadidl",3), JAMI("yakh",4);
+  
+	private final String malumat;
+	private final int number;
+	Year(String ml,int nm ){
+		malumat=ml;
+		number=nm;
+	}
+	public String getMalumat(){
+		return malumat;
+	}
+	
+   public int getNumber(){
+	   return number;
+   }
+	
+}
+
+
+
+
+package test1;
+import java.util.EnumSet;
+public class EnumTest {
+
+    
+    public static void main(String[] args) {
+    	System.out.print("fasal sifat number\n");
+    	for(Year a:EnumSet.range(Year.DUBI, Year.JAMI))
+     System.out.println(a+" "+a.getMalumat()+" "+a.getNumber());
+      
+    }
+}

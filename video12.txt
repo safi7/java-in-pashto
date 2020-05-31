@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class miwah {
+ public static void main(String args[]){
+ 
+
+ 
+	
+	 System.out.println("tasi pa koma jaba khabari kawi?\n");
+	 System.out.println("pashto=1, Dari=2, english=3\n");
+	 Scanner input=new Scanner(System.in);
+	 int jaba=input.nextInt();
+	 switch(jaba){
+	 case 1: System.out.println("tasi pashto khabari kawi");break;
+	 case 2: System.out.println("tasi Dari khabari kawi");break;
+	 case 3: System.out.println("tasi english khabari kawi");break;
+	default: System.out.println("ghalat number");break;
+	 }
+	 
+	
+ }
+ 
+}

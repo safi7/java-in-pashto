@@ -1,0 +1,23 @@
+import java.util.Random;
+
+public class miwah {
+ public static void main(String args[]){
+	
+ boolean x;
+ if(4<5)x=true;
+ else x=false;
+ System.out.println(x);
+ }
+}
+
+
+
+import java.util.Random;
+
+public class miwah {
+ public static void main(String args[]){
+	
+ double number=4.2341;
+ System.out.printf("%.2",number);
+ }
+}

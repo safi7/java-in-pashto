@@ -1,0 +1,56 @@
+import java.util.Optional;
+
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class test extends Application{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     launch(args);
+	}
+
+	@Override
+	public void start(Stage window) throws Exception {
+		
+		GridPane pane =new GridPane();
+		Label username=new Label("UserName");
+		GridPane.setConstraints(username, 0, 0);
+		
+		TextField textname=new TextField("example");
+		GridPane.setConstraints(textname, 1, 0);
+		
+		
+		Label pasword=new Label("Password");
+		GridPane.setConstraints( pasword, 2, 0);
+		
+		PasswordField pass=new PasswordField();
+		pass.setPromptText("password");
+		GridPane.setConstraints(pass, 3, 0);
+		
+		Button btn=new Button("Login");
+		GridPane.setConstraints(btn, 4,0);
+		btn.setStyle("-fx-font:20 arial; -fx-base:pink;");
+		pane.getChildren().addAll(username, textname,pasword,pass,btn);
+		Scene sen=new Scene(pane,500,350);
+		window.setScene(sen);
+		window.setTitle("my windwo");
+		window.show();
+		
+	}
+ 
+	
+}

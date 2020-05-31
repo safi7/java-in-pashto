@@ -1,0 +1,32 @@
+
+public class miwah {
+ public static void main(String args[]){
+ int nom1=7,nom2=6;
+ if(nom1>nom2)
+ {
+	 if(nom1%2==0)
+	 System.out.println(nom1+" loy di da doham "+nom2+" na, aw "+nom1+" joft di");
+	 else
+		 System.out.println(nom1+" loy di da doham "+nom2+" na, aw "+nom1+" taq di");
+ }
+ 
+ 
+ else if(nom1==nom2)
+	 
+ {
+	 if(nom1%2==0)
+	 System.out.println(nom1+" masawi di da doham "+nom2+" sara, aw "+nom1+" joft di");
+	 else
+		 System.out.println(nom1+" masawi di da doham "+nom2+" sara, aw "+nom1+" taq di");
+ }
+ else
+ {
+	 if(nom1%2==0)
+	 System.out.println(nom1+" kochnidi da doham "+nom2+" na, aw "+nom1+" joft di");
+	 else
+		 System.out.println(nom1+" kochni di da doham "+nom2+" na, aw "+nom1+" taq di");
+ }
+ }
+ 
+ 
+}

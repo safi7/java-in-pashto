@@ -1,0 +1,108 @@
+
+import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.Scene;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class test1 extends Application {
+
+	public static void main(String[] args)
+
+	{
+		Application.launch(args);
+	}
+   TableView<miwi>table=new TableView<>();
+	@Override
+	public void start(Stage stage) {
+		VBox root = new VBox();
+		
+      TableColumn<miwi,String>colNum=new TableColumn<>("Miwah");
+      colNum.setMinWidth(100);
+      colNum.setCellValueFactory(new PropertyValueFactory<>("num"));
+      
+      TableColumn<miwi,Double>colWazan=new TableColumn<>("Miqdar");  
+      colWazan.setMinWidth(50);
+      colWazan.setCellValueFactory(new PropertyValueFactory<>("wazan"));
+     
+      
+      TableColumn<miwi,Double>colQim=new TableColumn<>("Qimat");  
+      colQim.setMinWidth(50);
+      colQim.setCellValueFactory(new PropertyValueFactory<>("qimat"));
+     
+     table.setItems(make());
+     table.getColumns().addAll(colNum,colWazan,colQim);
+      
+		root.getChildren().add(table);
+		Scene scene = new Scene(root, 300, 200);
+		stage.setScene(scene);
+		stage.setTitle("A Pane Example");
+		stage.show();
+
+	}
+  public ObservableList<miwi>make(){
+	  ObservableList<miwi>array=FXCollections.observableArrayList();
+	  array.add(new miwi("mana",1,20));
+	  array.add(new miwi("narenge",1,15));
+	  array.add(new miwi("Anar",1,240));
+	  array.add(new miwi("kili",1,30));
+	  return array;
+  }
+}
+
+
+
+
+
+
+
+public class miwi {
+private String num;
+private double wazan;
+private double qimat;
+
+public miwi(){
+	num="";
+	wazan=0;
+	qimat=0;
+}
+
+public miwi(String nm, double w, double q){
+	num=nm;
+	wazan=w;
+	qimat=q;
+}
+
+public String getNum() {
+	return num;
+}
+
+public void setNum(String num) {
+	this.num = num;
+}
+
+public double getWazan() {
+	return wazan;
+}
+
+public void setWazan(double wazan) {
+	this.wazan = wazan;
+}
+
+public double getQimat() {
+	return qimat;
+}
+
+public void setQimat(double qimat) {
+	this.qimat = qimat;
+}
+
+
+}
+
